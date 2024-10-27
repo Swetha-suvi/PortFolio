@@ -275,3 +275,17 @@
 
 })(jQuery);
 
+document.getElementById('downloadButton1').addEventListener('click', function () {
+    resumeDownload()
+});
+document.getElementById('downloadButton2').addEventListener('click', function () {
+    resumeDownload()
+});
+function resumeDownload(){
+	const link = document.createElement('a');
+    link.href = './assets/Swetha_M_K_Resume.pdf'; // Replace with your actual PDF file path
+    link.download = 'Swetha_M_K_Resume.pdf'; // The name the file will be downloaded as
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
